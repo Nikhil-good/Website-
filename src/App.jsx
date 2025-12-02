@@ -51,7 +51,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter basename="/UDC_Test">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="font-sans">
         <Navbar
   onAuthOpen={() => setShowAuth(true)}
