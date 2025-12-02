@@ -1,0 +1,151 @@
+.feature-slider-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f7f9fc, #eef3fb);
+  text-align: center;
+}
+
+.title {
+  font-size: 34px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  cursor: grab;
+  scrollbar-width: none;
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-container.active {
+  cursor: grabbing;
+}
+
+/* CARD */
+.slider-card {
+  min-width: 320px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 28px;
+  color: white;
+  text-decoration: none;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ACTIVE CENTER CARD (ZOOM EFFECT) */
+.active-card {
+  transform: scale(1.12) !important;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25) !important;
+  z-index: 5;
+}
+
+/* Hover */
+.slider-card:hover {
+  transform: translateY(-5px);
+}
+
+/* BUTTONS */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background: #f0f0f0;
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+.slider-btn svg {
+  font-size: 20px;
+  color: #333;
+}
+
+
+.feature-slider-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f7f9fc, #eef3fb);
+  text-align: center;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 20px;
+}
+
+.slider-card {
+  min-width: 300px;
+  max-width: 300px;
+  height: 260px;
+  border-radius: 16px;
+  color: white;
+  padding: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.slider-card:hover {
+  transform: translateY(-5px);
+}
+
+.slider-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.slider-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.slider-card .logo {
+  opacity: 0.9;
+  font-size: 12px;
+}

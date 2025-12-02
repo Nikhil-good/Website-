@@ -1,0 +1,254 @@
+.hero-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #f8fbfe 0%, #eef8ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 5%;
+  margin-top: -70px;
+}
+
+.hero-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #222;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-text h1 span {
+  color: #1e88e5;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #555;
+}
+
+.free-quote-btn {
+  background: linear-gradient(to right, #1e90ff, #5a4bff);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.marquee-container{
+  width: 100%;
+  overflow:hidden;
+  
+}
+
+.marquee-track{
+display:flex;
+width:max-content;
+animation:scroll-left 15s linear infinite;
+}
+
+.marquee-text{
+  white-space: nowrap;
+  padding-right: 3rem;
+}
+
+@keyframes scroll-left{
+  from {
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%)
+  }
+}
+/* 🔥 Hover Effect - orange color */
+.free-quote-btn:hover {
+  background: #F05A28;
+  color: #fff;
+}
+
+.hero-support {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  max-width: 300px;
+}
+
+.support-icon {
+  font-size: 1.6rem;
+  color: #f15b5b;
+}
+
+.support-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.support-number {
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.hero-main-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hero-content-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Full-width Blue Marquee Bar */
+.navbar-marquee {
+  width: 100vw;
+       /* same navbar color */
+  color: black;
+  font-weight: 500;
+  padding: 6px 0;          /* reduced height */
+  position: relative;
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+/* scrolling track */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* scrolling animation */
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-slide 15s linear infinite;
+}
+
+.marquee-text {
+  padding-right: 3rem;
+  font-size: 15px;
+}
+
+/* smooth infinite scroll */
+@keyframes marquee-slide {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+
+/* ... (Your existing CSS code above .hero-image) ... */
+
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+  /* Add relative positioning to the main image container */
+  position: relative; 
+  /* The container's size should be based on the images inside it */
+  height: auto; 
+}
+
+/* New container for the rotating images */
+.image-slider-container {
+  width: 100%;
+  max-width: 600px; /* Use the same max-width as before */
+  margin: 0 auto; /* Center the container */
+  position: relative; /* Essential for containing absolutely positioned images */
+  /* Determine the height of this container based on the largest image aspect ratio */
+  /* This value might need tweaking, but we'll try to keep the aspect ratio */
+  padding-top: 50.66%; /* Example: if your image is 600x400 (400/600 = 66.66%) */
+  overflow: hidden; /* Ensure nothing spills out */
+}
+
+/* This class is now used by all image elements but styled to be positioned */
+.hero-main-img {
+  width: 100%;
+  max-width: 600px;
+  height: 100%; /* Fill the container height */
+  object-fit: contain;
+  /* These properties are now set inline in the JSX, but kept here for fallback/clarity */
+  position: absolute; 
+  top: 0;
+  left: 0;
+}
+
+/* The active/inactive classes are used for visibility control via opacity */
+.hero-main-img.inactive {
+    opacity: 0;
+    pointer-events: none; /* Prevents interaction with hidden image */
+}
+
+.hero-main-img.active {
+    opacity: 1;
+}
+
+/* ... (Your existing media queries below .hero-main-img) ... */
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hero-content-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}

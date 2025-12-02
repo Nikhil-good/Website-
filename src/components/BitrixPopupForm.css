@@ -1,0 +1,13 @@
+.popup-modal .modal-content {
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-styled .form-control {
+  border-radius: 12px;
+}
+
+.form-styled .form-control:focus {
+  border-color: #0357d4;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}

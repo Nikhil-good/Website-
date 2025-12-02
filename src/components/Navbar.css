@@ -1,0 +1,76 @@
+/* === Final Permanent Navbar Styles === */
+.custom-navbar {
+  background-color: #1f5794 !important;
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffffff!important;
+  font-weight:600;
+  text-align: center;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff !important;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link.active {
+  color: #F05A28 !important;
+  border-bottom: 2px solid #F05A28;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #F05A28 !important;
+}
+
+/* Buttons */
+.btn-outline-primary {
+  color: #F05A28 !important;
+  border-color: #fca311 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #F05A28 !important;
+  color: #0d1b2a !important;
+}
+
+.btn-primary {
+  background-color: #F05A28 !important;
+  border-color: #F05A28 !important;
+}
+
+.btn-primary:hover {
+  background-color: #ffb347 !important;
+  border-color: #ffb347 !important;
+}
+
+
+
+/* Responsive CSS (Media Query) */
+
+@media(max-width:768px){
+  
+
+  .custom-size{
+   font-size:10px;
+  }
+
+.size{
+  width:100px;
+  
+}
+}
+
+
+@media(max-width:550px){
+
+.custom-size{
+  font-size: 100px;
+}
+  
+.size{
+  height:100px;
+  
+}
+}
